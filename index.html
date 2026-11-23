@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orion Medrano's professional technology portfolio">
+  <title>Orion Medrano | IT & Software Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #172238;
+      --text: #f1f5f9;
+      --muted: #aabbd0;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #101b2f;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { font-weight: bold; color: var(--accent); }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    a { color: var(--accent); }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+    section {
+      padding: 75px 8%;
+      max-width: 1200px;
+      margin: auto;
+      scroll-margin-top: 90px;
+    }
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+    h2 { color: var(--accent); font-size: 2rem; }
+    .hero {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero p { max-width: 700px; }
+    .muted { color: var(--muted); }
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--accent);
+      color: #07111e;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px 10px 8px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid #293b56;
+      border-radius: 14px;
+      padding: 25px;
+    }
+    .card h3 { color: var(--accent); }
+    .resume-frame {
+      width: 100%;
+      height: 550px;
+      border: 1px solid #293b56;
+      border-radius: 10px;
+      background: white;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #101b2f;
+      color: var(--muted);
+    }
+    @media (max-width: 600px) {
+      header { position: static; }
+      section { padding: 45px 6%; }
+      nav { gap: 12px; font-size: 14px; }
+      .resume-frame { height: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">OM | Portfolio</div>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <p class="muted">Welcome to my professional portfolio</p>
+    <h1>Orion Medrano</h1>
+    <h2>Computer Information Systems Student</h2>
+    <p>
+      Aspiring IT and cybersecurity professional with
+      experience in technical support, programming,
+      databases, and software development.
+    </p>
+    <!-- Add a professional photograph here later. -->
+    <div>
+      <a class="button" href="#projects">View My Projects</a>
+      <a class="button" href="#contact">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Information Systems student at
+      Lamar University in Beaumont, Texas, with an
+      anticipated graduation date of May 2027.
+      My academic and professional interests include
+      information technology, cybersecurity, software
+      development, and database management.
+    </p>
+    <p>
+      Throughout my education, I have worked with
+      programming languages including Java, Python,
+      C++, and SQL. My coursework has introduced me
+      to software design, data structures, operating
+      systems, and database development. I enjoy
+      understanding how technology works and using
+      that knowledge to solve practical problems.
+    </p>
+    <p>
+      My technical support experience has helped me
+      strengthen my troubleshooting, communication,
+      and problem-solving abilities. I value the
+      importance of understanding a problem,
+      researching possible solutions, and explaining
+      technical information clearly to others.
+    </p>
+    <p>
+      I am particularly interested in developing my
+      knowledge of cybersecurity and computer systems.
+      I want to continue learning about network
+      security, system administration, secure software
+      practices, and the technologies organizations
+      use to protect their information.
+    </p>
+    <p>
+      This portfolio highlights my academic projects,
+      technical experience, and continued professional
+      development. My goal is to begin a career in
+      information technology, contribute to a team,
+      and build the practical experience necessary
+      to grow into more advanced technical roles.
+    </p>
+    <p>
+      I believe professional growth requires curiosity,
+      persistence, and a willingness to learn.
+      As I approach graduation, I am focused on
+      strengthening my technical foundation,
+      improving my software development skills,
+      and preparing for opportunities where I can
+      apply what I have learned.
+    </p>
+  </section>
+
+  <section id="resume">
+    <h2>My Resume</h2>
+    <p>View or download my professional resume.</p>
+    <a class="button" href="resume.pdf" download>
+      Download Resume
+    </a>
+    <iframe class="resume-frame"
+      src="resume.pdf"
+      title="Orion Medrano Resume">
+    </iframe>
+    <p class="muted">
+      Resume PDF will be uploaded in a later step.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>AI Assistant Project</h3>
+        <p>
+          An AI-assisted software application developed
+          as part of my Senior Seminar project.
+        </p>
+        <p><strong>Technologies:</strong> To be determined</p>
+        <p class="muted">
+          Screenshots and GitHub link coming soon.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Database Management Project</h3>
+        <p>
+          An academic database project demonstrating
+          SQL, relational database design, and
+          database programming concepts.
+        </p>
+        <p><strong>Technologies:</strong> MySQL, SQL</p>
+        <p class="muted">
+          Screenshots and GitHub link coming soon.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Personal Software Project</h3>
+        <p>
+          A personal programming project showcasing
+          software development and problem-solving.
+        </p>
+        <p><strong>Technologies:</strong> To be added</p>
+        <p class="muted">
+          Screenshots and GitHub link coming soon.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <p>Java, Python, C++, SQL</p>
+      </div>
+      <div class="card">
+        <h3>Systems</h3>
+        <p>Windows, Linux, Technical Troubleshooting</p>
+      </div>
+      <div class="card">
+        <h3>Databases</h3>
+        <p>MySQL, Relational Database Design</p>
+      </div>
+      <div class="card">
+        <h3>AI Tools</h3>
+        <p>ChatGPT, AI-Assisted Development</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      I am interested in entry-level IT,
+      software development, and cybersecurity
+      opportunities.
+    </p>
+    <p>
+      GitHub:
+      <a href="https://github.com/oreo107-R"
+         target="_blank" rel="noopener noreferrer">
+        github.com/oreo107-R
+      </a>
+    </p>
+    <p>Email: Add professional email address</p>
+    <p>LinkedIn: Add LinkedIn profile URL</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Orion Medrano.
+  All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
