@@ -2,7 +2,7 @@
 /*
     Project: TechAssist AI
     Developer: Orion Medrano
-    Course: COSC 4272 Senior Seminar
+    Course: COSC 4272 Senior Assessment
 
     Description:
     An AI-assisted, rule-based IT troubleshooting
