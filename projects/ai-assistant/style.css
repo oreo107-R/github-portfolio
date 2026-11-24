@@ -1,0 +1,237 @@
+
+/*
+    Project: TechAssist AI
+    Developer: Orion Medrano
+    Course: COSC 4272 Senior Seminar
+    Description: Application styling
+*/
+
+/* Color scheme */
+:root {
+    --background: #141414;
+    --surface: #242424;
+    --accent: #FFCA28;
+    --orange: #FF9800;
+    --text: #F5F5F5;
+    --muted: #BBBBBB;
+    --border: #4A3820;
+}
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* Header */
+header {
+    background: #1C1C1C;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid var(--orange);
+}
+
+header h1 {
+    color: var(--accent);
+    font-size: 42px;
+    margin: 0;
+}
+
+header p {
+    color: var(--muted);
+}
+
+header a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Main assistant container */
+.assistant-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(255, 152, 0, 0.12);
+}
+
+/* Assistant heading */
+.assistant-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.assistant-header h2 {
+    color: var(--orange);
+    margin: 0;
+}
+
+.assistant-header p {
+    color: var(--muted);
+}
+
+/* Conversation window */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    margin: 20px 0;
+    background: #181818;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+/* Chat messages */
+.message {
+    max-width: 85%;
+    padding: 15px;
+    border-radius: 12px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Assistant messages */
+.assistant {
+    align-self: flex-start;
+    background: #303030;
+    border-left: 3px solid var(--orange);
+}
+
+/* User messages */
+.user {
+    align-self: flex-end;
+    background: var(--accent);
+    color: #141414;
+}
+
+/* Quick troubleshooting buttons */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quick-actions button {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--orange);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quick-actions button:hover {
+    background: var(--orange);
+    color: #141414;
+}
+
+/* Message input */
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    background: #181818;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#user-input:focus {
+    outline: 1px solid var(--accent);
+}
+
+/* Send button */
+#send-button {
+    background: var(--accent);
+    color: #141414;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background: var(--orange);
+}
+
+#send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Clear conversation button */
+.clear-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Mobile device support */
+@media (max-width: 600px) {
+    .assistant-container {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .chat-box {
+        height: 350px;
+    }
+
+    .message {
+        max-width: 95%;
+    }
+
+    #send-button {
+        padding: 12px 18px;
+    }
+}
