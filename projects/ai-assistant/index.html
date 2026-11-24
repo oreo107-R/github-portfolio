@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TechAssist AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TechAssist AI</h1>
+        <p>Intelligent IT Support Assistant</p>
+        <a href="../../index.html">Back to Portfolio</a>
+    </header>
+
+    <main class="assistant-container">
+
+        <div class="assistant-header">
+            <h2>Technical Support</h2>
+            <p>How can I help you today?</p>
+        </div>
+
+        <div id="chat-box" class="chat-box"
+             role="log" aria-live="polite">
+
+            <div class="message assistant">
+                Hello! I'm TechAssist AI.
+                Describe your technical issue,
+                and I'll help you troubleshoot it.
+            </div>
+
+        </div>
+
+        <div class="quick-actions">
+
+            <button onclick="quickMessage('Wi-Fi issues')">
+                Network Issues
+            </button>
+
+            <button onclick="quickMessage('Windows issues')">
+                Windows Support
+            </button>
+
+            <button onclick="quickMessage('Hardware issues')">
+                Hardware Issues
+            </button>
+
+            <button onclick="quickMessage('Cybersecurity help')">
+                Cybersecurity
+            </button>
+
+        </div>
+
+        <div class="input-area">
+
+            <input type="text"
+                   id="user-input"
+                   aria-label="Describe your technical issue"
+                   placeholder="Describe your technical issue..."
+                   autocomplete="off">
+
+            <button id="send-button"
+                    onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+        <button class="clear-button"
+                onclick="clearChat()">
+            Clear Conversation
+        </button>
+
+    </main>
+
+    <footer>
+        <p>Developed by Orion Medrano</p>
+        <p>Lamar University | COSC 4272 Senior Seminar</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
